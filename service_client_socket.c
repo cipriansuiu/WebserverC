@@ -19,11 +19,58 @@
 /* why can I not use const size_t here? */
 #define buffer_size 1024
 
-
+#define partialContent "HTTP/1.1 206 Partial Content"
 #define goodResponse "HTTP/1.1 200 OK\n"
 #define badResponse "HTTP/1.1 404 Not Found\n"
 #define responseHeader "Accept-Ranges:bytes\nContent-Type:text/html\n"
 #define connectionClosed "Connection:close\n"
+#define byteRange "Content-Length:"
+
+#define acceptEconding "Accept-Encoding:gzip,deflate"
+#define sendGzip "Content-Encoding:gzip"
+
+char *getStart(char *buffer)
+{
+    char *start=strstr(buffer,"Range:bytes=");
+
+
+    start += strlen("Range:bytes=");
+    char *end = strchr(start, "-");
+    end[0] = '\0';
+    return start;
+}
+
+char *getEnd(char *buffer)
+{
+    char *start=strstr(buffer,"Range:bytes=");
+
+
+    start += strlen("Range:bytes=");
+    char *end = strchr(start,"-");
+    end[0] = '\0';
+    end++;
+    char *p=strchr(end,'\n');
+    p[0]='\n';
+    return end;
+}
+int acceptRanged(char *buffer)
+{
+    char *p=strstr(buffer,"Range:bytes");
+    if(p)
+        return 1;
+    return 0;
+}
+char *acceptsByteRange(char *buffer)
+{
+        char *copyBuffer=(char *)malloc(1024);
+        copyBuffer=strcpy(copyBuffer,buffer);
+        int startRange = atoi(getStart(copyBuffer));
+        int endRange = atoi(getEnd(copyBuffer));
+        char *ranged=strncpy(ranged,buffer+startRange,sizeof(char)*(startRange-endRange));
+        return ranged;
+
+}
+
 
 char *makeHeaders(int length)
 {
@@ -40,6 +87,12 @@ char *makeHeaders(int length)
     return statusLine;
 
 
+}
+int acceptEnc(char *buffer) {
+    char *p=strstr(buffer,acceptEconding);
+    if(p)
+        return 1;
+    return 0;
 }
 
 char *getURI(char *p)
@@ -83,9 +136,10 @@ char *createResponse(char *buffer)
     char *response;
     if(strcmp(p,"/ ")==0)
     {
-        fopen("index.jpeg","r");
+
         response=makeHeaders(0);
         char *content=readFromFile("Homepage.html");
+        if()
         strcat(response,content);
       //  strcat(response,'\0');
         response[strlen(response)]='\0';
@@ -140,7 +194,9 @@ service_client_socket (const int s, const char *const tag) {
        partial and return 0<x<bytes.  realistically you don't need to
        deal with this case unless you are writing multiple megabytes */
      //
-        char *response=createResponse(buffer);
+      int acceptsEncode=0;//assume it does not accepts encoding
+      acceptsEncode=acceptEnc(buffer);
+      char *response=createResponse(buffer);
       if (write (s, response, bytes) != bytes) {
       perror ("write");
       return -1;
@@ -180,4 +236,5 @@ service_client_socket (const int s, const char *const tag) {
   close (s);
   return 0;
 }
+
 

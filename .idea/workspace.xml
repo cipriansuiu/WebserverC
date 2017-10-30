@@ -11,7 +11,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34e4c51b-b55c-4b8b-96ab-c083f128a854" name="Default" comment="" />
+    <list default="true" id="34e4c51b-b55c-4b8b-96ab-c083f128a854" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/service_client_socket.c" afterPath="$PROJECT_DIR$/service_client_socket.c" />
+    </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,19 +23,21 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.45454547">
+    <splitter split-orientation="horizontal" split-proportion="0.7994842">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="service_client_socket.c" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/service_client_socket.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="702">
-                  <caret line="108" column="41" lean-forward="false" selection-start-line="108" selection-start-column="41" selection-end-line="108" selection-end-column="41" />
+                <state relative-caret-position="516">
+                  <caret line="60" column="13" lean-forward="false" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
                   <folding>
                     <element signature="e#0#18#0" expanded="true" />
-                    <element signature="e#1064#1276#0" expanded="false" />
-                    <element signature="e#2639#2813#0" expanded="false" />
-                    <element signature="e#4256#4325#0" expanded="true" />
+                    <element signature="e#2156#2272#0" expanded="false" />
+                    <element signature="e#2274#2486#0" expanded="false" />
+                    <element signature="e#2489#2914#0" expanded="false" />
+                    <element signature="e#3830#4004#0" expanded="false" />
+                    <element signature="e#5548#5617#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -126,8 +130,8 @@
         <option value="$PROJECT_DIR$/service_listen_socket.c" />
         <option value="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" />
         <option value="$PROJECT_DIR$/cmake-build-debug/Makefile" />
-        <option value="$PROJECT_DIR$/service_client_socket.c" />
         <option value="$PROJECT_DIR$/Homepage.html" />
+        <option value="$PROJECT_DIR$/service_client_socket.c" />
       </list>
     </option>
   </component>
@@ -138,10 +142,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="65" />
-    <option name="y" value="24" />
-    <option name="width" value="575" />
-    <option name="height" value="414" />
+    <option name="x" value="835" />
+    <option name="y" value="202" />
+    <option name="width" value="565" />
+    <option name="height" value="356" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -219,15 +223,16 @@
       <workItem from="1508857522383" duration="5681000" />
       <workItem from="1509304360093" duration="24143000" />
       <workItem from="1509335233847" duration="995000" />
-      <workItem from="1509359515026" duration="534000" />
+      <workItem from="1509359515026" duration="7988000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31353000" />
+    <option name="totallyTimeSpent" value="38807000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="951" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1638814" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -236,7 +241,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25429553" sideWeight="0.48733154" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25429553" sideWeight="0.48733154" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -269,9 +274,11 @@
           <caret line="108" column="41" lean-forward="true" selection-start-line="108" selection-start-column="41" selection-end-line="108" selection-end-column="41" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#1064#1276#0" expanded="false" />
-            <element signature="e#2639#2813#0" expanded="false" />
-            <element signature="e#4256#4325#0" expanded="true" />
+            <element signature="e#2156#2272#0" expanded="false" />
+            <element signature="e#2274#2486#0" expanded="false" />
+            <element signature="e#2489#2914#0" expanded="false" />
+            <element signature="e#3830#4004#0" expanded="false" />
+            <element signature="e#5548#5617#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -328,9 +335,11 @@
           <caret line="28" column="1" lean-forward="false" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#1064#1276#0" expanded="false" />
-            <element signature="e#2639#2813#0" expanded="false" />
-            <element signature="e#4256#4325#0" expanded="true" />
+            <element signature="e#2156#2272#0" expanded="false" />
+            <element signature="e#2274#2486#0" expanded="false" />
+            <element signature="e#2489#2914#0" expanded="false" />
+            <element signature="e#3830#4004#0" expanded="false" />
+            <element signature="e#5548#5617#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -446,9 +455,11 @@
           <caret line="39" column="39" lean-forward="false" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#1064#1276#0" expanded="false" />
-            <element signature="e#2639#2813#0" expanded="false" />
-            <element signature="e#4256#4325#0" expanded="true" />
+            <element signature="e#2156#2272#0" expanded="false" />
+            <element signature="e#2274#2486#0" expanded="false" />
+            <element signature="e#2489#2914#0" expanded="false" />
+            <element signature="e#3830#4004#0" expanded="false" />
+            <element signature="e#5548#5617#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -560,24 +571,26 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service_client_socket.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="108" column="41" lean-forward="false" selection-start-line="108" selection-start-column="41" selection-end-line="108" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#1064#1276#0" expanded="false" />
-            <element signature="e#2639#2813#0" expanded="false" />
-            <element signature="e#4256#4325#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Homepage.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="14" column="7" lean-forward="false" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service_client_socket.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="60" column="13" lean-forward="false" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#2156#2272#0" expanded="false" />
+            <element signature="e#2274#2486#0" expanded="false" />
+            <element signature="e#2489#2914#0" expanded="false" />
+            <element signature="e#3830#4004#0" expanded="false" />
+            <element signature="e#5548#5617#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
