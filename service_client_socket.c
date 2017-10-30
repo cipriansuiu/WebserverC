@@ -18,7 +18,7 @@
 
 /* why can I not use const size_t here? */
 #define buffer_size 1024
-
+#define contentLength "Content-Length: "
 #define partialContent "HTTP/1.1 206 Partial Content\n"
 #define goodResponse "HTTP/1.1 200 OK\n"
 #define badResponse "HTTP/1.1 404 Not Found\n"
@@ -177,8 +177,8 @@ char *createResponse(char *buffer,int range)
       //  strcat(response,'\0');
         response[strlen(response)]='\0';
     }
-    else
-        if(strcmp(p,"/secondPage.html ")==0)
+
+     if(strcmp(p,"/secondPage.html ")==0)
         {
             response=makeHeaders(range);
             char *content=readFromFile("secondPage.html");
@@ -190,11 +190,21 @@ char *createResponse(char *buffer,int range)
             printf("3->>>>>>:%s\n",response);
         }
 
-    else
-        {
-            response=(char *) malloc(sizeof(badResponse));
-            strcpy(response,badResponse);
-        }
+
+    if(strcmp(p,"/secondPage.html ")!=0&&strcmp(p,"/ ")!=0)
+    {
+        response = (char *) malloc(sizeof(badResponse));
+        response=makeHeaders(0);
+        //strcpy(response, goodResponse);
+       // char *contentlength=;
+
+        char *content = readFromFile("NotFound.html");
+        strcat(response, content);
+
+
+      //  response[strlen(response)] = '\0';
+
+    }
     return response;
 }
 
@@ -231,6 +241,7 @@ service_client_socket (const int s, const char *const tag) {
       //acceptsEncode=acceptEnc(buffer);
 
       char *response=createResponse(buffer,acceptRanged(buffer));
+      printf("%s\n",response);
       if (write (s, response, bytes) != bytes) {
       perror ("write");
       return -1;
