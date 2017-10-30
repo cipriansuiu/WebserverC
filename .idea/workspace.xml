@@ -12,6 +12,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34e4c51b-b55c-4b8b-96ab-c083f128a854" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/multi_thread_server" afterPath="$PROJECT_DIR$/multi_thread_server" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/service_client_socket.o" afterPath="$PROJECT_DIR$/service_client_socket.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/single_thread_server" afterPath="$PROJECT_DIR$/single_thread_server" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/service_client_socket.c" afterPath="$PROJECT_DIR$/service_client_socket.c" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -22,22 +26,25 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="NetworksRadu" />
+  </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.7994842">
+    <splitter split-orientation="horizontal" split-proportion="0.5460993">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="service_client_socket.c" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/service_client_socket.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="516">
-                  <caret line="60" column="13" lean-forward="false" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
+                <state relative-caret-position="-72">
+                  <caret line="237" column="8" lean-forward="true" selection-start-line="237" selection-start-column="8" selection-end-line="237" selection-end-column="8" />
                   <folding>
                     <element signature="e#0#18#0" expanded="true" />
-                    <element signature="e#2156#2272#0" expanded="false" />
-                    <element signature="e#2274#2486#0" expanded="false" />
-                    <element signature="e#2489#2914#0" expanded="false" />
-                    <element signature="e#3830#4004#0" expanded="false" />
-                    <element signature="e#5548#5617#0" expanded="true" />
+                    <element signature="e#2945#3097#0" expanded="false" />
+                    <element signature="e#3098#3331#0" expanded="false" />
+                    <element signature="e#3333#3784#0" expanded="false" />
+                    <element signature="e#4868#5066#0" expanded="false" />
+                    <element signature="e#6634#6703#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -117,6 +124,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>free</find>
+      <find>printf</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -142,10 +150,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="835" />
-    <option name="y" value="202" />
-    <option name="width" value="565" />
-    <option name="height" value="356" />
+    <option name="x" value="791" />
+    <option name="y" value="131" />
+    <option name="width" value="555" />
+    <option name="height" value="326" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -223,27 +231,27 @@
       <workItem from="1508857522383" duration="5681000" />
       <workItem from="1509304360093" duration="24143000" />
       <workItem from="1509335233847" duration="995000" />
-      <workItem from="1509359515026" duration="7988000" />
+      <workItem from="1509359515026" duration="8637000" />
+      <workItem from="1509383439307" duration="13453000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38807000" />
+    <option name="totallyTimeSpent" value="52909000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="951" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1638814" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1638814" sideWeight="0.49462366" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25429553" sideWeight="0.5126685" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25429553" sideWeight="0.5148248" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25429553" sideWeight="0.48733154" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25429553" sideWeight="0.4851752" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1638814" sideWeight="0.50537634" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914287" sideWeight="0.49380055" order="7" side_tool="false" content_ui="tabs" />
@@ -270,15 +278,76 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/service_client_socket.c">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="60" column="13" lean-forward="false" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#2945#3097#0" expanded="false" />
+            <element signature="e#3098#3331#0" expanded="false" />
+            <element signature="e#3333#3784#0" expanded="false" />
+            <element signature="e#4868#5066#0" expanded="false" />
+            <element signature="e#6634#6703#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="12" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service_listen_socket.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="45" column="3" lean-forward="false" selection-start-line="45" selection-start-column="2" selection-end-line="45" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service_listen_socket_multithread.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1638">
+          <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/get_listen_socket.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Homepage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service_client_socket.c">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1944">
           <caret line="108" column="41" lean-forward="true" selection-start-line="108" selection-start-column="41" selection-end-line="108" selection-end-column="41" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#2156#2272#0" expanded="false" />
-            <element signature="e#2274#2486#0" expanded="false" />
-            <element signature="e#2489#2914#0" expanded="false" />
-            <element signature="e#3830#4004#0" expanded="false" />
-            <element signature="e#5548#5617#0" expanded="true" />
+            <element signature="e#2945#3097#0" expanded="false" />
+            <element signature="e#3098#3331#0" expanded="false" />
+            <element signature="e#3333#3784#0" expanded="false" />
+            <element signature="e#4868#5066#0" expanded="false" />
+            <element signature="e#6634#6703#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -335,11 +404,11 @@
           <caret line="28" column="1" lean-forward="false" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#2156#2272#0" expanded="false" />
-            <element signature="e#2274#2486#0" expanded="false" />
-            <element signature="e#2489#2914#0" expanded="false" />
-            <element signature="e#3830#4004#0" expanded="false" />
-            <element signature="e#5548#5617#0" expanded="true" />
+            <element signature="e#2945#3097#0" expanded="false" />
+            <element signature="e#3098#3331#0" expanded="false" />
+            <element signature="e#3333#3784#0" expanded="false" />
+            <element signature="e#4868#5066#0" expanded="false" />
+            <element signature="e#6634#6703#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -455,11 +524,11 @@
           <caret line="39" column="39" lean-forward="false" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#2156#2272#0" expanded="false" />
-            <element signature="e#2274#2486#0" expanded="false" />
-            <element signature="e#2489#2914#0" expanded="false" />
-            <element signature="e#3830#4004#0" expanded="false" />
-            <element signature="e#5548#5617#0" expanded="true" />
+            <element signature="e#2945#3097#0" expanded="false" />
+            <element signature="e#3098#3331#0" expanded="false" />
+            <element signature="e#3333#3784#0" expanded="false" />
+            <element signature="e#4868#5066#0" expanded="false" />
+            <element signature="e#6634#6703#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -531,13 +600,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="69" lean-forward="true" selection-start-line="12" selection-start-column="69" selection-end-line="12" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-628">
@@ -579,17 +641,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-810">
+          <caret line="12" column="69" lean-forward="true" selection-start-line="12" selection-start-column="69" selection-end-line="12" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/service_client_socket.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="516">
-          <caret line="60" column="13" lean-forward="false" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
+        <state relative-caret-position="-72">
+          <caret line="237" column="8" lean-forward="true" selection-start-line="237" selection-start-column="8" selection-end-line="237" selection-end-column="8" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#2156#2272#0" expanded="false" />
-            <element signature="e#2274#2486#0" expanded="false" />
-            <element signature="e#2489#2914#0" expanded="false" />
-            <element signature="e#3830#4004#0" expanded="false" />
-            <element signature="e#5548#5617#0" expanded="true" />
+            <element signature="e#2945#3097#0" expanded="false" />
+            <element signature="e#3098#3331#0" expanded="false" />
+            <element signature="e#3333#3784#0" expanded="false" />
+            <element signature="e#4868#5066#0" expanded="false" />
+            <element signature="e#6634#6703#0" expanded="true" />
           </folding>
         </state>
       </provider>

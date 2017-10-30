@@ -19,7 +19,7 @@
 /* why can I not use const size_t here? */
 #define buffer_size 1024
 
-#define partialContent "HTTP/1.1 206 Partial Content"
+#define partialContent "HTTP/1.1 206 Partial Content\n"
 #define goodResponse "HTTP/1.1 200 OK\n"
 #define badResponse "HTTP/1.1 404 Not Found\n"
 #define responseHeader "Accept-Ranges:bytes\nContent-Type:text/html\n"
@@ -29,30 +29,44 @@
 #define acceptEconding "Accept-Encoding:gzip,deflate"
 #define sendGzip "Content-Encoding:gzip"
 
+//looks in the buffer for the start of the byte range for fetching partial messages
 char *getStart(char *buffer)
 {
-    char *start=strstr(buffer,"Range:bytes=");
+
+    char *copyBuffer=(char *)malloc(1024);
+    copyBuffer=strcpy(copyBuffer,buffer);
+
+    char *start=strstr(copyBuffer,"Range:bytes ");
+   // printf("%s\n",start);
+    printf("%s\n",start);
+    start += strlen("Range:bytes ");
 
 
-    start += strlen("Range:bytes=");
-    char *end = strchr(start, "-");
+    char *end = strchr(start, '-');
+
     end[0] = '\0';
+
     return start;
 }
-
+//looks in the buffer for the end of the byte range for fetching partial messages
 char *getEnd(char *buffer)
 {
-    char *start=strstr(buffer,"Range:bytes=");
+
+    char *copyBuffer=(char *)malloc(1024);
+    copyBuffer=strcpy(copyBuffer,buffer);
+    char *start=strstr(copyBuffer,"Range:bytes ");
 
 
-    start += strlen("Range:bytes=");
-    char *end = strchr(start,"-");
+    start += strlen("Range:bytes ");
+    char *end = strchr(start,'-');
     end[0] = '\0';
     end++;
     char *p=strchr(end,'\n');
     p[0]='\n';
     return end;
 }
+
+//check wheter the client wants to be sent partial messages
 int acceptRanged(char *buffer)
 {
     char *p=strstr(buffer,"Range:bytes");
@@ -60,22 +74,33 @@ int acceptRanged(char *buffer)
         return 1;
     return 0;
 }
-char *acceptsByteRange(char *buffer)
+//fetch the bytes requested from the request
+char *acceptsByteRange(char *buffer,char *content)
 {
-        char *copyBuffer=(char *)malloc(1024);
-        copyBuffer=strcpy(copyBuffer,buffer);
-        int startRange = atoi(getStart(copyBuffer));
-        int endRange = atoi(getEnd(copyBuffer));
-        char *ranged=strncpy(ranged,buffer+startRange,sizeof(char)*(startRange-endRange));
+
+       printf("this is interesting:%d\n",atoi(getStart(buffer)));
+        int startRange = atoi(getStart(buffer));
+
+
+        int endRange =atoi(getEnd(buffer));
+     //   printf("%d\n",startRange);
+        char *ranged=(char *) malloc(sizeof(char)*(endRange-startRange));
+       // strncpy()
+        strncpy(ranged,content+startRange,sizeof(char)*(endRange-startRange));
+        printf("This is the partial message:%s\n",ranged);
+
         return ranged;
 
 }
 
-
-char *makeHeaders(int length)
+//creates a generic headers for a http response
+char *makeHeaders(int range)
 {
     char *statusLine=(char *) malloc(1024);
-    strcpy(statusLine,goodResponse);
+    if(range==0)
+        strcpy(statusLine,goodResponse);
+    else
+        strcpy(statusLine,partialContent);
    // statusLine++;
     char *closeConnection=(char *) malloc(sizeof(connectionClosed));
     strcpy(closeConnection,connectionClosed);
@@ -88,13 +113,14 @@ char *makeHeaders(int length)
 
 
 }
+//checks wheter it accepts encoding
 int acceptEnc(char *buffer) {
     char *p=strstr(buffer,acceptEconding);
     if(p)
         return 1;
     return 0;
 }
-
+//getter for the URI
 char *getURI(char *p)
 {
     char *pointer=(char *)malloc(200);
@@ -107,7 +133,7 @@ char *getURI(char *p)
 
 }
 
-
+//Reads an html from file
 char *readFromFile(char *fileName)
 {
 
@@ -130,16 +156,23 @@ char *readFromFile(char *fileName)
     return  buffer;
 }
 
-char *createResponse(char *buffer)
+
+//creates responses based on the request
+char *createResponse(char *buffer,int range)
 {
     char *p=getURI(buffer);
     char *response;
     if(strcmp(p,"/ ")==0)
     {
 
-        response=makeHeaders(0);
+        response=makeHeaders(range);
         char *content=readFromFile("Homepage.html");
-        if()
+        if(range)
+        {
+
+            content=acceptsByteRange(buffer,content);
+            printf("sad\n");
+        }
         strcat(response,content);
       //  strcat(response,'\0');
         response[strlen(response)]='\0';
@@ -147,7 +180,7 @@ char *createResponse(char *buffer)
     else
         if(strcmp(p,"/secondPage.html ")==0)
         {
-            response=makeHeaders(0);
+            response=makeHeaders(range);
             char *content=readFromFile("secondPage.html");
             printf("1->>>>>>:%s\n",response);
             printf("2->>>>>>:%s\n",content);
@@ -166,7 +199,7 @@ char *createResponse(char *buffer)
 }
 
 
-
+//get the whole request
 char *getRequest(char *string)
 {
   char *aux=(char *) malloc(200);
@@ -194,9 +227,10 @@ service_client_socket (const int s, const char *const tag) {
        partial and return 0<x<bytes.  realistically you don't need to
        deal with this case unless you are writing multiple megabytes */
      //
-      int acceptsEncode=0;//assume it does not accepts encoding
-      acceptsEncode=acceptEnc(buffer);
-      char *response=createResponse(buffer);
+      //int acceptsEncode;//assume it does not accepts encoding
+      //acceptsEncode=acceptEnc(buffer);
+
+      char *response=createResponse(buffer,acceptRanged(buffer));
       if (write (s, response, bytes) != bytes) {
       perror ("write");
       return -1;
